@@ -8,6 +8,7 @@
 `Select max(users.age), organizations.name as organization_name from users, organizations where organizations.id = users.org_id group by organizations.name;`
 
 * Find the first person who joined each company.
+`Select users.name, min(users.meta->>'joined') as joined_date, organizations.name as organization_name from users, organizations where organizations.id = users.org_id group by organizations.name;`
 
 * Give me the name and comment of all employees.
 `Select name, meta->>'comment' as comment from users;`
