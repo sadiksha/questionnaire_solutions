@@ -1,0 +1,12 @@
+// Java
+public boolean isEmpty(String s) {
+  return s.length() == 0;
+}
+
+# ruby
+def empty?(s)
+  return s.size == 0
+end
+
+One of the advantages of ruby is shown in the above example. This is called duck-typing. The Java code expects s to always be a string. However, the s in ruby code can be an array of objects or a string.
+
