@@ -1,4 +1,4 @@
-Used sqlfiddle for testing http://sqlfiddle.com/#!15/c8edc/17
+Used sqlfiddle for testing http://sqlfiddle.com/#!15/c8edc/19.
 
 * Give me the name and age of all employees.
 
