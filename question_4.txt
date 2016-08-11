@@ -8,5 +8,10 @@ def empty?(s)
   return s.size == 0
 end
 
-One of the advantages of ruby is shown in the above example. This is called duck-typing. The Java code expects s to always be a string. However, the s in ruby code can be an array of objects or a string.
+According to the above example, in the Java isEmpty method, the argument 's' should always be string. This is because s is strictly typed for Java and any other argument than string will raise an exception.
+
+However, when s = [] || {} || "" the empty?(s) would return true. The empty?(1) will still not raise an exception, even though the value will be false because 1.size = 8. This behaviour is usually defined as duck typing.
+
+
+
 
