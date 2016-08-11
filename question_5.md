@@ -1,3 +1,5 @@
+Used sqlfiddle for testing http://sqlfiddle.com/#!15/c8edc/17
+
 * Give me the name and age of all employees.
 `Select name, age from users;`
 
