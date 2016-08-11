@@ -5,10 +5,10 @@
 `Select users.name, organizations.name as organization_name from users, organizations where users.org_id = organizations.id;`
 
 * Give me the oldest person at each organization.
-`Select max(users.age), organizations.name as organization_name from users, organizations where organizations.id = users.org_id group by organizations.name;`
+`Select org_id as organization_id, users.name as username, age from (select *, row_number() over (partition by org_id order by age desc) from users) as users where row_number = 1;`
 
 * Find the first person who joined each company.
-`Select users.name, min(users.meta->>'joined') as joined_date, organizations.name as organization_name from users, organizations where organizations.id = users.org_id group by organizations.name;`
+`Select org_id as organization_id, users.name as username, (users.meta->>'joined') as joined_date from (select *, row_number() over (partition by org_id order by meta->>'joined' asc) from users) as users where row_number = 1;`
 
 * Give me the name and comment of all employees.
 `Select name, meta->>'comment' as comment from users;`
