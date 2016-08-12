@@ -8,10 +8,6 @@ def empty?(s)
   return s.size == 0
 end
 
-According to the above example, in the Java isEmpty method, the argument 's' should always be string. This is because s is strictly typed for Java and any other argument than string will raise an exception.
+The argument s in Java's isEmpty(string s) example is strictly typed. It means that the argument s should always be a string. If the method is called with data type any other than string, then an exception will be raised.
 
-However, when s = [] || {} || "" the empty?(s) would return true. The empty?(1) will still not raise an exception, even though the value will be false because 1.size = 8. This behaviour is usually defined as duck typing.
-
-
-
-
+However, ruby as the dynamic programming language has a behaviour called duck typing. Which says that any thing that walks and talks like a duck is a duck. To elaborate it, the empty?(s) method returns either true or false for all the datatypes as long as size is defined. If the object s does not have a size method, it will return "undefined error size" on s. However, the empty?(s) will return true only for [] || {} || "". The empty?(1) will return false as the size of the integer is 8. Thus, we can already see that where isEmpty can only take a string as an argument, ruby's empty? can take atleast array, hash, string and integer (and much more) without raising an exception.
