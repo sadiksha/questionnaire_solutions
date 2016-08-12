@@ -15,9 +15,8 @@ describe NumberAddition do
     expect(@sum).to be(4)
   end
 
-  it "asserts negative result after addition of two numbers is not correct" do
-    expect(@sum).not_to be(1)
-    expect(@sum).not_to be(2)
-    expect(@sum).not_to be(3)
+  it "asserts the result to be non negative and greater than decimal number" do
+    expect(@sum).to be > 0
+    expect(@sum).to be > 0.1
   end
 end
