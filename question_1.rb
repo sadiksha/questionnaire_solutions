@@ -11,7 +11,7 @@ class HashOperations
 end
 
 describe HashOperations do
-  it "counts the number of characters in a hash" do
+  it "returns the count of elements of an array" do
     input = ["a", "a", "b"]
     expectation = {"a" => 2,
                    "b" => 1}
