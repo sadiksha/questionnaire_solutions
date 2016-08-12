@@ -6,4 +6,8 @@ class Foo
   def self.hi
     puts __method__
   end
+
+  def method_missing(meth,*args)
+    puts "undefined method #{meth}"
+  end
 end
